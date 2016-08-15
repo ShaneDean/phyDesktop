@@ -4,8 +4,8 @@
 
 Æô¶¯ÏîÄ¿
 
-sencha app watch
-
+    sencha app watch
+    
 
 
 ===
