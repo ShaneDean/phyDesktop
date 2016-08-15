@@ -1,3 +1,24 @@
+#README
+
+基于extjs 6.0 gpl
+
+启动项目
+
+sencha app watch
+
+
+
+===
+下面是生成的内容
+
+
+
+
+
+
+
+
+
 # PhyDesktop
 
 This folder is primarily a container for the top-level pieces of the application.
