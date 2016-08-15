@@ -13,11 +13,11 @@ Ext.define('PhyDesktop.Config',{
                 appUrl  :   '/webapp/fm.html',
                 //appUrl  :   'http://172.16.6.212/fm/',
                 title   :   '文件管理系统',
-                iconUrl :   '/img/shortcuts/rtc.png',
-                iconCls :   'iconCls',
+                iconUrl :   '/resources/img/shortcuts/fm.png',
+                iconCls :   'shortcuts_fm',
                 module  :   '',
-                width   :   '950',
-                height  :   '580',
+                width   :   950,
+                height  :   580,
                 isResize    : true,
                 maximizable : true,
                 resizable   : true
@@ -30,11 +30,11 @@ Ext.define('PhyDesktop.Config',{
 
                 //appUrl  : 'https://172.16.6.205:9443/ccm/',
                 title   : 'IBM_RTC',
-                iconUrl :  '/img/shortcuts/rtc.png',
-                iconCls :  'iconCls',
+                iconUrl :  '/resources/img/shortcuts/rtc.png',
+                iconCls :  'shortcuts_rtc',
                 module  :  '',
-                width   :  '950',
-                height  :  '580',
+                width   :  950,
+                height  :  580,
                 isResize    : true,
                 maximizable : true,
                 resizable   : true
@@ -46,11 +46,11 @@ Ext.define('PhyDesktop.Config',{
 
                 //appUrl  : 'http://cn.bing.com/',
                 title   : '必应搜索',
-                iconUrl :  '/img/shortcuts/bing.png',
-                iconCls :  'iconCls',
+                iconUrl :  '/resources/img/shortcuts/bing.png',
+                iconCls :  'shortcuts_bing',
                 module  :  '',
-                width   :  '950',
-                height  :  '580',
+                width   :  950,
+                height  :  580,
                 isResize    : true,
                 maximizable : true,
                 resizable   : true
@@ -62,18 +62,18 @@ Ext.define('PhyDesktop.Config',{
 
                 //appUrl  : 'https://172.16.7.230/',
                 title   : '虚拟资源管理系统',
-                iconUrl :  '/img/shortcuts/ovirt.png',
-                iconCls :  'iconCls',
+                iconUrl :  '/resources/img/shortcuts/ovirt.png',
+                iconCls :  'shortcuts_ovirt',
                 module  :  '',
-                width   :  '950',
-                height  :  '580',
+                width   :  950,
+                height  :  580,
                 isResize    : true,
                 maximizable : true,
                 resizable   : true
-            } ,
+            }
 
 
-        },
+        }
 
     }
 });

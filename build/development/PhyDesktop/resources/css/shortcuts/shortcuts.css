@@ -1,0 +1,23 @@
+
+
+/*shortcuts*/
+.shortcuts_fm{
+    background-image:url(/resources/img/shortcuts/fm.png);
+    width: 46px;
+    height: 46px;
+}
+.shortcuts_rtc{
+    background-image:url(/resources/img/shortcuts/rtc.png);
+    width: 46px;
+    height: 46px;
+}
+.shortcuts_bing{
+    background-image:url(/resources/img/shortcuts/bing.png);
+    width: 46px;
+    height: 46px;
+}
+.shortcuts_ovirt{
+    background-image:url(/resources/img/shortcuts/ovirt.png);
+    width: 46px;
+    height: 46px;
+}

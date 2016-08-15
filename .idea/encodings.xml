@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/app/desktop/Wallpaper.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/flash/clock121.swf" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/resources/img/shortcuts/bing.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/resources/img/shortcuts/fm.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/resources/img/shortcuts/ovirt.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/resources/img/shortcuts/rtc.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/resources/img/taskbar/clock.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/resources/img/wallpapers/Blue-Sencha.jpg" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

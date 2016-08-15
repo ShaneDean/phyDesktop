@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'PhyDesktop' );
-$image-search-path: 'D:/code/project-ext/PhyDesktop/build/development/PhyDesktop/classic/resources';
+$image-search-path: 'C:/Users/phy/WebstormProjects/phyDesktop/build/development/PhyDesktop/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-ext-abstractcomponent: dynamic(true);;
 $include-ext-abstractcontainer: dynamic(true);;
