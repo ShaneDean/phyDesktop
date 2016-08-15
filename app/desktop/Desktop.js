@@ -155,13 +155,13 @@ Ext.define("PhyDesktop.desktop.Desktop",{
         var me = this, win = me.windowMenu.theWin;
         win.close();
     },
-    onWindowMenuBeforeShow : function(){
+    onWindowMenuBeforeShow : function(menu){
         var items = menu.items.items, win = menu.theWin;
         items[0].setDisabled(win.maximized !== true && win.hidden !== true); // Restore
         items[1].setDisabled(win.minimized === true); // Minimize
         items[2].setDisabled(win.maximized === true || win.hidden === true); // Maximize
     },
-    onWindowMenuHide : function(menux){
+    onWindowMenuHide : function(menu){
         Ext.defer(function(){
             menu.theWin = null;
         }, 1);
@@ -292,7 +292,7 @@ Ext.define("PhyDesktop.desktop.Desktop",{
         if( record.data.module == ''){
             win = me.createMyWindow(record.data);
         }else{
-            module = me.app.getModule(record.data.module),
+            module = me.app.getModule(record.data.module);
                 win = module && module.createWindow();
         }
 
@@ -309,8 +309,8 @@ Ext.define("PhyDesktop.desktop.Desktop",{
                 border: false,
                 id: recordData.id,
                 title: recordData.title,
-                width: parseInt(recordData.width),
-                height: parseInt(recordData.height),
+                width: (typeof recordData.width === 'string' ?parseInt(recordData.width) : recordData.width),
+                height: (typeof recordData.width === 'string' ?parseInt(recordData.height) : recordData.height),
                 maximizable: recordData.maximizable,
                 resizable: recordData.resizable,
                 iconCls: "icon-ie",
@@ -462,7 +462,7 @@ Ext.define("PhyDesktop.desktop.Desktop",{
     },
     onWindowClose : function( win){
         var me = this;
-        me.windows.remover(win);
+        me.windows.remove(win);
         me.taskbar.removeTaskButton(win.taskButton);
         me.updateActiveWindow();
 
@@ -499,4 +499,4 @@ Ext.define("PhyDesktop.desktop.Desktop",{
     }
 
 
-})
+});
