@@ -16,23 +16,25 @@ Ext.define('PhyDesktop.DesktopApp',{
         return GetWinMenu(this);
     },
     getDesktopConfig: function(){
-        var wallpaper = Ext.util.Cookies.get("Wallpaper");
+/*        var wallpaper = Ext.util.Cookies.get("Wallpaper");
         var defaultWallpaper = "/resources/img/wallpapers/civic.jpg";
         if (wallpaper != null) {
             defaultWallpaper = wallpaper
-        }
-        var me = this,
-            app = me.callParent();
+        }*/
 
-        return Ext.apply(app,{
+        var me = this,
+            ret = me.callParent(),
+            defaultWallpaper = '/resources/img/wallpapers/civic.jpg';
+
+        return Ext.apply(ret,{
             contextMenuItems: [{
                 text: "桌面背景",
-                iconCls: "settings",
+                iconCls: "background-setting",
                 handler: me.onSettings,
                 scope: me
             }, {
                     text: "桌面主题",
-                    iconCls: "gnome-settings-theme",
+                    iconCls: "theme-setting",
                     handler: me.onSetthemes,
                     scope: me
             }],
@@ -125,7 +127,7 @@ Ext.define('PhyDesktop.DesktopApp',{
 
     },
     onreload: function(){
-        alert('onreload');
+        top.location.reload()
     },
     onIpad : function(){
         alert('onIpad');
@@ -147,7 +149,10 @@ Ext.define('PhyDesktop.DesktopApp',{
 
     },
     onSettings: function(){
-        alert('onSettings');
+        var dlg = new PhyDesktop.phy.SystemSetting({
+            desktop : this.desktop
+        });
+        dlg.show();
     },
     onSetthemes: function(){
         alert('onSetthemes');
@@ -172,5 +177,6 @@ function GetWinMenu (app){
 
     //console.log(app);
     appList.push(new PhyDesktop.phy.SystemStatus());
+    //appList.push(new PhyDesktop.phy.SystemSetting());
     return appList;
 }

@@ -58,7 +58,7 @@ Ext.define('PhyDesktop.Config',{
             ovirt :{
                 id      : 'id_ovirt',
                 name    : 'ovirt',
-                appUrl  :   '/webapp/bing.html',
+                appUrl  :   '/webapp/ovirt.html',
 
                 //appUrl  : 'https://172.16.7.230/',
                 title   : '虚拟资源管理系统',

@@ -887,6 +887,8 @@ $include-phydesktop-desktop-startmenu: dynamic(true);;
 $include-phydesktop-desktop-taskbar: dynamic(true);;
 $include-phydesktop-desktop-trayclock: dynamic(true);;
 $include-phydesktop-desktop-wallpaper: dynamic(true);;
+$include-phydesktop-desktop-wallpapermodel: dynamic(true);;
+$include-phydesktop-phy-systemsetting: dynamic(true);;
 $include-phydesktop-phy-systemstatus: dynamic(true);;
 $include-phydesktop-store-personnel: dynamic(true);;
 $include-phydesktop-view-main-list: dynamic(true);;

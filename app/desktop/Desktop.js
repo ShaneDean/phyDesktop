@@ -115,20 +115,25 @@ Ext.define("PhyDesktop.desktop.Desktop",{
             items: [{
                 text:'还原',
                 handler: me.onWindowMenuRestore,
+                cls : '',
                 scope : me
             },{
                 text:'最小化',
                 handler : me.onWindowMenuMinimize,
+                cls : '',
                 scope : me
             },{
                 text: '最大化',
                 handler : me.onWindowMenuMaximize,
+                cls : '',
                 scope: me
             },
             '-',
             {
                 text:'关闭',
                 handler: me.onWindowMenuClose,
+                cls : 'windowMenu-close',
+
                 scope: me
             }],
             listeners : {
