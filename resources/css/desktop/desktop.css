@@ -180,3 +180,55 @@ div.ux-taskbar div.x-toolbar {
     width: 46px;
     height: 46px;
 }
+
+/*quick-start*/
+.icon-closeall {
+    background-image: url(/resources/img/taskbar/icon16_error.png) !important;
+}
+
+
+.mymac
+{
+    background-image: url( /resources/img/taskbar/mymac.png ) !important;
+}
+
+/*windows start menu*/
+
+.startmenu{
+    background-image: url( /resources/img/startmenu/startmenu.gif) !important;
+
+}
+.icon-cpu {
+    background-image: url(/resources/img/startmenu/status16.png) !important;
+}
+
+.icon-user {
+    background-image: url(/resources/img/startmenu/im16.gif) !important;
+}
+.user {
+    background-image:url( /resources/img/startmenu/user.gif ) !important;
+}
+.userpassword{
+    background-image:url( /resources/img/startmenu/key.png ) !important;
+
+}
+.background-setting{
+    background-image:url( /resources/img/startmenu/gears.gif ) !important;
+}
+.theme-setting{
+    background-image:url( /resources/img/startmenu/theme.png ) !important;
+
+}
+
+.startmenu{
+    height: 40px;
+    background: transparent;
+    color : white;
+    font-size : 24px;
+
+}
+
+/*windows app icon*/
+.icon-ie {
+    background-image: url(/resources/img/windows/ie16.png) !important;
+}

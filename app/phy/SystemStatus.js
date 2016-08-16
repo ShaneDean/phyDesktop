@@ -3,7 +3,9 @@
  */
 Ext.define('PhyDesktop.phy.SystemStatus',{
    extend : 'PhyDesktop.desktop.Module',
-    requires: [],
+    requires: [
+    /*    'Ext.chart.*'*/
+    ],
     id: 'systemStatus',
     refreshRate : 500,
     init : function(){
@@ -11,17 +13,6 @@ Ext.define('PhyDesktop.phy.SystemStatus',{
             text: '系统状态',
             iconCls : 'icon-cpu'
         };
-/*        Ext.chart.theme.Memory = Ext.extend(Ext.chart.theme.Base,{
-            constructor : function(args){
-                Ext.chart.theme.Memory.superclass.constructor.call(this,
-                    Ext.apply({
-                        colors: ["rgb(244, 16, 0)", "rgb(248, 130, 1)", "rgb(0, 7, 255)", "rgb(84, 254, 0)"]
-                    }, B)
-                )
-
-            }
-        });*/
-
     },
     createWindow : function(){
         var win = this.app.getDesktop().getWindow(this.id);
@@ -65,7 +56,7 @@ Ext.define('PhyDesktop.phy.SystemStatus',{
             title: '系统状态',
             width : 800,
             height: 600,
-            animCollapse: false,
+            //animCollapse: false,
             constrainHeader: true,
             border: false,
             layout: {
@@ -76,6 +67,10 @@ Ext.define('PhyDesktop.phy.SystemStatus',{
                 'background-color':'#FFF'
             },
             listeners:{
+                afterrender: function(){
+                    alert('afterrender system status');
+                },
+/*
                 afterrender:{
                     fn: me.updateCharts,
                     delay: 100
@@ -83,26 +78,40 @@ Ext.define('PhyDesktop.phy.SystemStatus',{
                 destroy: function(){
                     me.updateTimer = null;
                 },
+*/
                 scope: me
             },
             items:[{
                 flex:1,
                 xtype: 'container',
-                layout:{
-                    type:'vbox',
-                    align:'stretch'
+                layout: {
+                    type: 'vbox',       // Arrange child items vertically
+                    align: 'stretch',    // Each takes up full width
+                    padding: 5
                 },
-                tiems:[
-                    me.createCpu1LoadChart(),
-                    me.createCpu2LoadChart()
-                ]
+                items: [{               // Results grid specified as a config object with an xtype of 'grid'
+                    xtype: 'grid',
+                    columns: [{header: 'Column One'}],            // One header just for show. There's no data,
+                    store: Ext.create('Ext.data.ArrayStore', {}), // A dummy empty data store
+                    flex: 1                                       // Use 1/3 of Container's height (hint to Box layout)
+                }, {
+                    xtype: 'splitter'   // A splitter between the two child items
+                }, {                    // Details Panel specified as a config object (no xtype defaults to 'panel').
+                    title: 'Details',
+                    bodyPadding: 5,
+                    items: [{
+                        fieldLabel: 'Data item',
+                        xtype: 'textfield'
+                    }], // An array of form fields
+                    flex: 2             // Use 2/3 of Container's height (hint to Box layout)
+                }]
             },{
                 flex: 1,
                 xtype: "container",
                 layout: {type: "vbox", align: "stretch"},
                 items: [
-                    me.createMemoryPieChart(),
-                    me.createProcessChart()
+                    //me.createMemoryPieChart(),
+                    //me.createProcessChart()
                 ]
             }]
         })

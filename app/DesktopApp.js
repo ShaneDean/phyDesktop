@@ -17,7 +17,7 @@ Ext.define('PhyDesktop.DesktopApp',{
     },
     getDesktopConfig: function(){
         var wallpaper = Ext.util.Cookies.get("Wallpaper");
-        var defaultWallpaper = "/resources/img/wallpapers/Blue-Sencha.jpg";
+        var defaultWallpaper = "/resources/img/wallpapers/civic.jpg";
         if (wallpaper != null) {
             defaultWallpaper = wallpaper
         }
@@ -52,8 +52,8 @@ Ext.define('PhyDesktop.DesktopApp',{
     getStartConfig: function(){
         var me = this, app = me.callParent();
         return Ext.apply(app, {
-            title: "导航栏",
-            iconCls: "user",
+            title: "开始菜单",
+            iconCls: "startmenu",
             height: 300,
             toolConfig: {
                 width: 110,
@@ -66,33 +66,33 @@ Ext.define('PhyDesktop.DesktopApp',{
                     }, {
                         text: "用户注册",
                         iconCls: "icon-user",
-                        handler: this.onReguser,
-                        scope: this
+                        handler: me.onReguser,
+                        scope: me
                     }, {
                         text: "修改密码",
-                        iconCls: "key",
-                        handler: this.onChangePwd,
-                        scope: this
+                        iconCls: "userpassword",
+                        handler: me.onChangePwd,
+                        scope: me
                     }, "-", {
                         text: "桌面背景",
-                        iconCls: "settings",
+                        iconCls: "background-setting",
                         handler: me.onSettings,
                         scope: me
                     }, {
                         text: "桌面主题",
-                        iconCls: "gnome-settings-theme",
+                        iconCls: "theme-setting",
                         handler: me.onSetthemes,
                         scope: me
                     }, "-", {
                         text: "刷新桌面",
                         iconCls: "mymac",
-                        handler: this.onreload,
-                        scope: this
+                        handler: me.onreload,
+                        scope: me
                     }, {
                         text: "注销登录",
                         iconCls: "gnome-keyring-manager",
-                        handler: this.onlogOut,
-                        scope: this
+                        handler: me.onlogOut,
+                        scope: me
                     }, {
                         text: "退出系统",
                         iconCls: "logout",
@@ -117,7 +117,7 @@ Ext.define('PhyDesktop.DesktopApp',{
                     this.app.getDesktop().showDesktop()
                 }
             },  {
-                name: "关闭所有窗口", iconCls: "icon_padlock", handler: function () {
+                name: "关闭所有窗口", iconCls: "icon-closeall", handler: function () {
                     this.app.getDesktop().closeAllWindows()
                 }
             }], trayItems: [{xtype: "trayclock", flex: 1}]
@@ -159,6 +159,7 @@ Ext.define('PhyDesktop.DesktopApp',{
 
 });
 
+//开始菜单中的应用
 function GetWinMenu (app){
     var appList = [];
     //Ext.each(PhyDesktop.Config.apps,function(){
@@ -167,9 +168,9 @@ function GetWinMenu (app){
 
 
 
-    alert('GetWinMenu');
+    //alert('GetWinMenu');
 
-    console.log(app);
+    //console.log(app);
     appList.push(new PhyDesktop.phy.SystemStatus());
     return appList;
 }
